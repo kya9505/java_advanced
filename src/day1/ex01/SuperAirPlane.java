@@ -1,4 +1,4 @@
-package day1;
+package day1.ex01;
 
 public class SuperAirPlane extends AirPlane{
     //상수선언

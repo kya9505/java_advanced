@@ -1,4 +1,4 @@
-package day1;
+package day1.ex01;
 
 public class AIrPlaneMain {
     public static void main(String[] args) {
