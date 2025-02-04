@@ -11,7 +11,7 @@ public abstract class Wheeler {
  
  public void stop(){
 	 velocity = 0;
-	 System.out.println("정지상태로 속도를 0으로 초기화합니다.");
+	 System.out.println("정지상태로 속도를"+velocity+"로 초기화합니다.");
  }
 }
 

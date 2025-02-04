@@ -1,16 +1,9 @@
 package Homework.Shape;
 
 public abstract class Shape {
-    private double area;
+   protected double area;
     private String name;
 
-    public double getArea() {
-        return area;
-    }
-
-    public void setArea(double area) {
-        this.area = area;
-    }
 
     public String getName() {
         return name;
@@ -25,5 +18,7 @@ public abstract class Shape {
         this.name = name;
     }
     abstract void calculationArea();
-    public void print(){};
+    public void print(){
+        System.out.printf("%s의 면적은 %f%n",name,area);
+    }
 }

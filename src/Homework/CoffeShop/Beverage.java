@@ -1,17 +1,16 @@
 package Homework.CoffeShop;
 
 abstract public class Beverage {
-    String name;
-    int price;
-    static int TotalPrice;
-    String SalesInfo;
+    private String name;
+    protected int price;
+    private static int TotalPrice;
+    private String SalesInfo;
 
     public Beverage(){}
 
-    public static void getSalesInfo(Beverage[] beverage) {
-        for(int i = 0 ; i<beverage.length; i++){
-            System.out.println(i + "번째 판매 음료는 "+ beverage[i].name+"이며,"+"가격은 "+ beverage[i].price);
-        }
+    public Beverage(String name) {
+        this.name = name;
+        calcPrice();
     }
 
     public void setName(String name) {
@@ -22,11 +21,6 @@ abstract public class Beverage {
         this.price = price;
     }
 
-    public void setTotalPrice(int totalPrice) {
-        TotalPrice = totalPrice;
-    }
-
-
     public String getName() {
         return name;
     }
@@ -35,7 +29,7 @@ abstract public class Beverage {
         return price;
     }
 
-    public abstract void calcPrice(String name);
+    public abstract void calcPrice();
 
     public static int getTotalPrice(Beverage beverage[]){
         for (int i = 0; i < beverage.length; i++) {
@@ -43,4 +37,10 @@ abstract public class Beverage {
         }
         return TotalPrice;
         }
+    public static void getSalesInfo(Beverage[] beverage) {
+        for(int i = 0 ; i<beverage.length; i++){
+            System.out.println(i + "번째 판매 음료는 "+ beverage[i].name+"이며,"+"가격은 "+ beverage[i].price);
+        }
+    }
+
 }

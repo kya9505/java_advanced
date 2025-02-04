@@ -3,13 +3,13 @@ package Homework.Wheeler;
 public class Truck extends Wheeler {
 
     public Truck(String carName) {
-        super.carName = carName;
+        this.carName = carName;
     }
 
     public Truck(String carName , int velocity, int wheelNumber) {
-        super.carName = carName;
-        super.velocity = velocity;
-        super.wheelNumber = wheelNumber;
+        this.carName = carName;
+        this.velocity = velocity;
+        this.wheelNumber = wheelNumber;
         System.out.println(carName+" : 바퀴 "+ wheelNumber + "입니다.");
     }
 
@@ -19,9 +19,7 @@ public class Truck extends Wheeler {
         if(velocity>100) {
             velocity = 100;
             System.out.println(carName+"의 최고속도 위반으로 속도를 100으로 낮춥니다.");
-
         }else System.out.println(carName+"의 현재 속도는"+velocity+"입니다.");
-
     }
 
     @Override

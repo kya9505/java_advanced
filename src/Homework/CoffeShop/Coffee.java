@@ -2,28 +2,24 @@ package Homework.CoffeShop;
 
 public class Coffee extends Beverage {
        public static int amount;
+
        public Coffee(String name) {
-           this.name = name;
-           calcPrice(name);
+           super(name);
+           calcPrice();
+           amount++;
        }
 
     @Override
-    public void calcPrice(String name) {
-        if(name.equals("Americano")){
-            setName(name);
+    public void calcPrice() {
+        if(getName().equals("Americano")){
             setPrice(1500);
-            amount++;
-        }
-        if(name.equals("Cappuccino")){
-            setName(name);
+         }
+        if(getName().equals("Cappuccino")){
             setPrice(3000);
-            amount++;
-        }
-        if(name.equals("CafeLatte")){
-            setName(name);
+         }
+        if(getName().equals("CafeLatte")){
             setPrice(2500);
-            amount++;
-        }
+         }
 
     }
 }

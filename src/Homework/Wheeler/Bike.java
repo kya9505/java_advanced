@@ -7,9 +7,9 @@ public class Bike extends Wheeler {
     }
 
     public Bike(String carName, int velocity, int wheelNumber) {
-        super.carName = carName;
-        super.velocity = velocity;
-        super.wheelNumber = wheelNumber;
+        this.carName = carName;
+        this.velocity = velocity;
+        this.wheelNumber = wheelNumber;
         System.out.println("자전거 : 바퀴 "+ wheelNumber + "입니다.");
     }
 

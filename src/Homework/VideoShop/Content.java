@@ -1,9 +1,10 @@
 package Homework.VideoShop;
 
 public abstract class Content {
-    String title;
-    int price;
+    private String title;
+    private int price;
 
+    public Content(){}
     public Content(String title) {
         this.title = title;
     }

@@ -1,16 +1,25 @@
 package Homework.Shape;
 
 public class Circle extends Shape {
-    double radius;
+   private double radius;
 
-    public Circle(double radius) {
+    public Circle(double radius,String name) {
+        super(name);
         this.radius = radius;
         calculationArea();
     }
 
+    public double getRadius() {
+        return radius;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+
     @Override
-    void calculationArea() {
-        setArea(radius*radius* 3.141592653589793);
-        System.out.println(getArea());
+    public void calculationArea() {
+       double result = this.radius*this.radius* Math.PI;
+       this.area = result;
     }
 }
