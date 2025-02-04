@@ -1,4 +1,4 @@
-package Homework.CoffeShop;
+package day1.Homework.CoffeShop;
 
 abstract public class Beverage {
     private String name;

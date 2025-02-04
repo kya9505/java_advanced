@@ -1,4 +1,4 @@
-package Homework.VideoShop;
+package day1.Homework.VideoShop;
 
 public abstract class Content {
     private String title;

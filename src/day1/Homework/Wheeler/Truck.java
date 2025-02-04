@@ -1,4 +1,4 @@
-package Homework.Wheeler;
+package day1.Homework.Wheeler;
 
 public class Truck extends Wheeler {
 

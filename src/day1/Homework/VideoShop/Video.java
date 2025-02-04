@@ -1,4 +1,4 @@
-package Homework.VideoShop;
+package day1.Homework.VideoShop;
 
 public class Video extends Content {
     String genre;

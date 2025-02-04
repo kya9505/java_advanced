@@ -1,4 +1,4 @@
-package Homework.Shape;
+package day1.Homework.Shape;
 
 public class Rectangular extends Shape {
     private double width;

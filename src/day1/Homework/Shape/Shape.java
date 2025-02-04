@@ -1,4 +1,4 @@
-package Homework.Shape;
+package day1.Homework.Shape;
 
 public abstract class Shape {
    protected double area;

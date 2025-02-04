@@ -1,4 +1,4 @@
-package Homework.CoffeShop;
+package day1.Homework.CoffeShop;
 
 public class Tea extends Beverage {
     public static int amount;

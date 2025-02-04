@@ -1,4 +1,4 @@
-package Homework.Shape;
+package day1.Homework.Shape;
 
 public class Circle extends Shape {
    private double radius;
