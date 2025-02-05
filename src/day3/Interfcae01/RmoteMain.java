@@ -5,9 +5,12 @@ public class RmoteMain {
         RemoteControl remoteControl;
         remoteControl = new Tv();
         remoteControl.turnOn();
+        remoteControl.setVolume(10);
+        remoteControl.turnOff();
+        System.out.println();
         remoteControl = new Radio();
         remoteControl.turnOn();
-        System.out.println("최대볼륨 : "+RemoteControl.MAX_VOLUME);
-        System.out.println("최대볼륨 : "+RemoteControl.MIN_VOLUME);
+        remoteControl.setVolume(20);
+        remoteControl.turnOff();;
     }
 }
