@@ -32,8 +32,11 @@ public class FactoryMain {
     public void getResult(Factory mainFactory, char mainFactorySkill, IWorkingTogether partner) {
         System.out.println("* " + mainFactory.getFactoryName() + " 공장의 하루 생산량과 파트너 공장 협력 시 추가 생산량은 다음과 같다.");
         System.out.println("1.하루 생산량 = "+ mainFactory.makeProducts(mainFactorySkill));
-        System.out.printf("2.파트너 공장[%s] 협력 시 추가 생산량 = %d\n",((Factory)partner).getFactoryName(), partner.workTogether(partner));
+        if(partner instanceof Factory) { //파트너로 전달된 객체가 팩토리를 상속받는다면 파트너를 팩토리로 형변환하여 공장이름을 출력
+            System.out.printf("2.파트너 공장[%s] 협력 시 추가 생산량 = %d\n", ((Factory) partner).getFactoryName(), partner.workTogether(partner));
+        }else System.out.println("파트너 공장이 아닙니다.");
         System.out.println("--------------------------------------------------------------");
+
     }
 
 }
