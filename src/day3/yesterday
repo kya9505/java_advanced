@@ -11,4 +11,7 @@
 
 
 리소스 자동닫기
-    -리소스 : 데이터를 제공하는 객체,
+    -리소스 : 데이터를 제공하는 객체,open 후에 반드시 close해야한다.
+        =>자동으로 close하는 resource Aotoclose code
+
+
