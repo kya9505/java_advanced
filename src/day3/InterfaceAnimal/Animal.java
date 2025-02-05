@@ -1,16 +1,25 @@
 package day3.InterfaceAnimal;
 
 public abstract class Animal {
+
     private int speed;
-    private static double distance;
-    int hours;
+    private double distance;
+    private int hours;
 
     public Animal(int speed) {
         this.speed = speed;
     }
 
-    public static void setDistance(double distance) {
-        Animal.distance = distance;
+    public void setDistance(double distance) {
+        this.distance = distance;
+    }
+
+    public int getHours() {
+        return hours;
+    }
+
+    public void setHours(int hours) {
+        this.hours = hours;
     }
 
     public int getSpeed() {
@@ -24,6 +33,5 @@ public abstract class Animal {
     public double getDistance() {
         return distance;
     }
-
-    public abstract void run(int hours);
+    public abstract void run(int hours); //이동거리 측정
 }
