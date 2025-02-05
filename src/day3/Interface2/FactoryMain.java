@@ -32,8 +32,7 @@ public class FactoryMain {
     public void getResult(Factory mainFactory, char mainFactorySkill, IWorkingTogether partner) {
         System.out.println("* " + mainFactory.getFactoryName() + " 공장의 하루 생산량과 파트너 공장 협력 시 추가 생산량은 다음과 같다.");
         System.out.println("1.하루 생산량 = "+ mainFactory.makeProducts(mainFactorySkill));
-        System.out.printf("2.파트너 공장[%s] 협력 시 추가 생산량 = %d\n",mainFactory.getFactoryName(), partner.workTogether(partner));
-
+        System.out.printf("2.파트너 공장[%s] 협력 시 추가 생산량 = %d\n",((Factory)partner).getFactoryName(), partner.workTogether(partner));
         System.out.println("--------------------------------------------------------------");
     }
 
