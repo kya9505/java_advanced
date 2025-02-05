@@ -13,8 +13,7 @@ public class Chicken extends Animal implements Cheatable{
 
     @Override
     public void fly() {
-        setDistance(getSpeed()*2*this.getHours());
-        System.out.printf("날으는 닭의 이동거리 = %.1f\n",getDistance());
+        setSpeed(getSpeed()*2);
     }
 
 }

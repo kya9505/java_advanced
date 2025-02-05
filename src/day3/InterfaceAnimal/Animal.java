@@ -4,7 +4,6 @@ public abstract class Animal {
 
     private int speed;
     private double distance;
-    private int hours;
 
     public Animal(int speed) {
         this.speed = speed;
@@ -12,14 +11,6 @@ public abstract class Animal {
 
     public void setDistance(double distance) {
         this.distance = distance;
-    }
-
-    public int getHours() {
-        return hours;
-    }
-
-    public void setHours(int hours) {
-        this.hours = hours;
     }
 
     public int getSpeed() {

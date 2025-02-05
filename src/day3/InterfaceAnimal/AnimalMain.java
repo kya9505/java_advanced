@@ -11,13 +11,10 @@ public class AnimalMain {
         }
 
         for(int i=1; i<4; i++){
-            cheatableChicken.setHours(i);
             System.out.println(i+"시간 후");
             dog.run(i);
             chicken.run(i);
-            cheatableChicken.fly();
+            cheatableChicken.run(i);
         }
-
     }
-
 }
