@@ -24,4 +24,19 @@ public class Radio implements RemoteControl {
     public void turnOff() {
         System.out.println("라디오를 끈다");
     }
+
+    private int memoryVolume;
+
+    @Override
+    public void setMute(boolean mute) {
+        RemoteControl.super.setMute(mute);
+        if(mute){
+            this.memoryVolume = this.volume;
+            System.out.println("쉿 모드 작동");
+            setVolume(RemoteControl.MIN_VOLUME);
+        }else {
+            System.out.println("쉿모드 해제");
+            setVolume(this.memoryVolume);
+        }
+    }
 }

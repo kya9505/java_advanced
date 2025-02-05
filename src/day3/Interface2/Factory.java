@@ -4,7 +4,6 @@ public abstract class Factory {
     private int openHour;
     private int closeHour;
     private String name;
-    private char skill;
 
     public Factory(int openHour, int closeHour, String name) {
         this.openHour = openHour;
@@ -12,12 +11,8 @@ public abstract class Factory {
         this.name = name;
     }
 
-    public char getSkill() {
-        return skill;
-    }
+    public Factory() {
 
-    public void setSkill(char skill) {
-        this.skill = skill;
     }
 
     public int getOpenHour() {

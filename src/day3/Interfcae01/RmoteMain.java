@@ -7,10 +7,13 @@ public class RmoteMain {
         remoteControl.turnOn();
         remoteControl.setVolume(10);
         remoteControl.turnOff();
+
         System.out.println();
         remoteControl = new Radio();
         remoteControl.turnOn();
         remoteControl.setVolume(20);
         remoteControl.turnOff();;
+
+        RemoteControl.changeBattery();
     }
 }

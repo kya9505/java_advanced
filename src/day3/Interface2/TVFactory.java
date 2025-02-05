@@ -1,6 +1,7 @@
 package day3.Interface2;
 
 public class TVFactory extends Factory implements IWorkingTogether{
+    public TVFactory(){}
     public TVFactory( String name, int openHour, int closeHour) {
         super(openHour, closeHour, name);
     }
