@@ -28,16 +28,16 @@ public class FactoryMain {
         ex.getResult(TVXYZ, 'B', TVABC);
 
     }
-
     public void getResult(Factory mainFactory, char mainFactorySkill, IWorkingTogether partner) {
         System.out.println("* " + mainFactory.getFactoryName() + " 공장의 하루 생산량과 파트너 공장 협력 시 추가 생산량은 다음과 같다.");
         System.out.println("1.하루 생산량 = "+ mainFactory.makeProducts(mainFactorySkill));
-        if(partner instanceof Factory) { //파트너로 전달된 객체가 팩토리를 상속받는다면 파트너를 팩토리로 형변환하여 공장이름을 출력
-            System.out.printf("2.파트너 공장[%s] 협력 시 추가 생산량 = %d\n", ((Factory) partner).getFactoryName(), partner.workTogether(partner));
-        }else System.out.println("파트너 공장이 아닙니다.");
+//        if(partner instanceof Factory) { //파트너로 전달된 객체가 팩토리를 상속받는다면 파트너를 팩토리로 형변환하여 공장이름을 출력
+//            System.out.printf("2.파트너 공장[%s] 협력 시 추가 생산량 = %d\n", ((Factory) partner).getFactoryName(), partner.workTogether(partner));
+//        }
+        if(partner instanceof Factory p) { //인터페이스 변수 파트너가 팩토리의 객체를 포함한다면? 상속받는다면, 변수를 팩토리로 캐스팅해서 메서드 호출
+            System.out.printf("2.파트너 공장[%s] 협력 시 추가 생산량 = %d\n",p.getFactoryName(), partner.workTogether(partner));
+        } else System.out.println("파트너 공장이 아닙니다.");
         System.out.println("--------------------------------------------------------------");
-
     }
-//
 }
 

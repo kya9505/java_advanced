@@ -1,10 +1,17 @@
-//package day3.homework;
+package day3.homework;
+
+public class Cafe {
+    public static void main(String[] args) {
+        Coustomer A = new Coustomer();
+        Coustomer B = new Coustomer();
+        CafeOwner cafeOwner = new CafeOwner();
+
+        A.getOrder("Latte");
+        B.getOrder("Americano");
 //
-//public class Cafe implements Menu {
-//    private String owner;
-//
-//    @Override
-//    public void menuChoice(String menu) {
-//
-//    }
-//}
+//        cafeOwner.makingDrink(A);
+//        cafeOwner.makingDrink(B);
+
+
+    }
+}
