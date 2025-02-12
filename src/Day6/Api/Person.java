@@ -1,9 +1,20 @@
 package Day6.Api;
 
-import lombok.Data;
 
-@Data
 public class Person {
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
     private final String name;
     private final int age;
 

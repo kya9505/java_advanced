@@ -1,0 +1,41 @@
+package day8.Set;
+
+public class Member {
+    private String name;
+    private int age;
+
+    public Member(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        //name과 age가 같다면 true
+        if(o instanceof Member taget){
+            return taget.name.equals(name) && taget.age ==age;
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return name.hashCode() + age;
+    }
+}
