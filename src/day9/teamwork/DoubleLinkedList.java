@@ -109,12 +109,18 @@ public class DoubleLinkedList<T> {
     public void addPreNode(T isData, T addData){
         Node <T> node = this.head;
         while (node != null) {
-            if (node.data == isData) {
+            if (node.data==isData) { //일치하는 노드찾음
                 Node <T> newNode = new Node<T>(addData);
-                newNode.next = node;
-                newNode.prev = node.prev;
-                node.prev.next = newNode;
+                newNode.next = node; // 새노드의 next에 찾은 노드
+                newNode.prev = node.prev; //새 노드의 prev에 찾은 노드의 prev
+                if (node.prev != null) {
+                    node.prev.next = newNode; // 찾은 노드의 prev 이전 노드의 next를 새 노드로 설정
+                }
                 node.prev = newNode;
+                if (node == this.head) {  // 찾은 노드의 prev가 head이면 head를 새 노드로 업데이트
+                    this.head = newNode;
+                }
+                return;
             }else node = node.next;
         }
     }
