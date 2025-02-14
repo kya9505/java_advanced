@@ -124,7 +124,18 @@ public class DoubleLinkedList<T> {
             }else node = node.next;
         }
     }
+
+
+    public void deletNode(T data){
+        Node <T> node = this.head;
+        Node <T> predNode = null;
+        while (node != null){
+            if(node.data == data) node = predNode;
+            else node = node.next;
+        }
+    }
 }
+
 
 
 
