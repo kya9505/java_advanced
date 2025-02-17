@@ -24,7 +24,7 @@ public class Main {
                 this.age = age;
             }
         }
-
+q
         User user1 = new User("고윤아",31);
         User user2 = new User("이민우",34);
         User user3 = new User("강아지",64);
