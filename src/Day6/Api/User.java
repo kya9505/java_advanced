@@ -14,4 +14,7 @@ public class User implements Cloneable{
     public Object clone() throws CloneNotSupportedException{
         return super.clone();
     }
+
+    public void setUserid(String userid) {
+    }
 }
