@@ -1,12 +1,10 @@
-package jdbc.board;
+package jdbc.boardClass;
 
 import lombok.Data;
 
-import java.io.File;
 import java.sql.Blob;
-
 @Data
-public class Board {
+public class boardDTO {
     private int bno;
     private String btitle ;
     private String bcontent ;

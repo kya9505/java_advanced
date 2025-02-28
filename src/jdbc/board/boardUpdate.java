@@ -15,10 +15,10 @@ public class boardUpdate {
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/ssgdb?serverTimezone=Asia/Seoul", "root", "root");
             System.out.println("Connection OK" + connection);
 
-            String query = "" + "update boards set" + " bwriter = ? " + " where bwriter  = ? ";
+            String query = "" + "update boards set" + " bwriter = ? " + " where bno  = ? ";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1, "빨리 하걸아");
-            preparedStatement.setString(2, "윤아야 졸지마라");
+            preparedStatement.setString(1, "타자가 느리다");
+            preparedStatement.setInt(2, 2);
 
             int row = preparedStatement.executeUpdate();
             System.out.println(row + "row update completed");
