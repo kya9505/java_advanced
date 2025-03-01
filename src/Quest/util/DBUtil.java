@@ -21,11 +21,13 @@ import java.util.ResourceBundle;
 
 @Data
 public class DBUtil {
-//    private static ResourceBundle bundle;
+
+    private static ResourceBundle bundle;
    static { // 클래스명으로 호출하려고?
-//       bundle = ResourceBundle.getBundle("Quest.cofing.dbinfo");
+       bundle = ResourceBundle.getBundle("Quest.cofing.dbinfo");
        try {
-           Class.forName("com.mysql.cj.jdbc.Driver"); // db 드라이버 조회
+//           Class.forName("com.mysql.cj.jdbc.Driver"); // db 드라이버 조회
+               Class.forName(bundle.getString("driver")); // db 드라이버 조회
        } catch (
                ClassNotFoundException e) {
            throw new RuntimeException(e);
@@ -33,10 +35,14 @@ public class DBUtil {
    }
 
    public static Connection getConnection(){
-       Connection conn = null;
+//       Connection conn = null;
        try {
-           conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/questdb?serverTimezone=Asia/Seoul" ,"root","root");
-           return conn;
+//           conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/questdb?serverTimezone=Asia/Seoul" ,"root","root");
+//           return conn;
+           return DriverManager.getConnection(
+                   bundle.getString("url"),
+                   bundle.getString("user"),
+                   bundle.getString("password"));
        } catch (SQLException e) {
            System.out.println("연결실패");
            return null;
