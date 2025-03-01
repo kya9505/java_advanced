@@ -1,4 +1,5 @@
-package jdbc.users;
+package java_advanced.src.jdbc.users;
+
 
 import java.sql.Connection;
 import java.sql.DriverManager;

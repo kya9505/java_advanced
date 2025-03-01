@@ -1,11 +1,7 @@
-package Quest.dao;
+ package java_advanced.src.Quest.dao;
 
-import Quest.util.DBUtil;
-import Quest.vo.User;
-import jdbc.board.Board;
 import lombok.Data;
 
-import java.io.FileInputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -326,6 +322,7 @@ public class User_Management_Service {
             stmt = conn.prepareStatement(query);
             rs = stmt.executeQuery(query);
 
+
             while (rs.next()) {
                 User user  = new User();
                 user.setMemId(rs.getString("memId"));
@@ -335,7 +332,6 @@ public class User_Management_Service {
                 user.setMem_addr(rs.getString("mem_addr"));
                 System.out.println(user);
             }
-
             System.out.println("===============================================");
             System.out.println("출력 작업 끝...");
 

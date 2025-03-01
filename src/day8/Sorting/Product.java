@@ -1,4 +1,4 @@
-package day8.Sorting;
+package java_advanced.src.day8.Sorting;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

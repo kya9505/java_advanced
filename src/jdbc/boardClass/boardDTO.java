@@ -1,4 +1,4 @@
-package jdbc.boardClass;
+package java_advanced.src.jdbc.boardClass;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package jdbc.users;
+package java_advanced.src.jdbc.users;
 
 import java.sql.*;
 

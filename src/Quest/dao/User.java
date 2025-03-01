@@ -1,4 +1,4 @@
-package Quest.vo;
+package java_advanced.src.Quest.dao;
 
 import lombok.Data;
 

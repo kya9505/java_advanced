@@ -1,4 +1,4 @@
-package day8.Sorting;
+package java_advanced.src.day8.Sorting;
 
 import java.util.ArrayList;
 import java.util.Arrays;

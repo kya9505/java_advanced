@@ -1,6 +1,5 @@
-package jdbc.boardClass;
+package java_advanced.src.jdbc.boardClass;
 
-import jdbc.board.Board;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

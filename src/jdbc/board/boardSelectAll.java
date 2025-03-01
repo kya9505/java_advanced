@@ -1,4 +1,4 @@
-package jdbc.board;
+package java_advanced.src.jdbc.board;
 
 import java.sql.*;
 
