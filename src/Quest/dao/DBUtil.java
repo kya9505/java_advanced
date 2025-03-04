@@ -23,11 +23,9 @@ import java.util.ResourceBundle;
 public class DBUtil {
 
     private static ResourceBundle bundle;
-
-    static { // 클래스명으로 호출하려고?
-        bundle = ResourceBundle.getBundle("Quest.cofing.dbinfo");
+    static {
+        bundle = ResourceBundle.getBundle("HRmanager0304.cofing.dbinfo");
         try {
-//           Class.forName("com.mysql.cj.jdbc.Driver"); // db 드라이버 조회
             Class.forName(bundle.getString("driver")); // db 드라이버 조회
         } catch (
                 ClassNotFoundException e) {
