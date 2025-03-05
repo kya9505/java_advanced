@@ -16,7 +16,8 @@ public class DBUtil {
         try {
             Class.forName(bundle.getString("driver")); // db 드라이버 조회
         } catch (
-                ClassNotFoundException e) {
+                ClassNotFoundException e)
+        {
             throw new RuntimeException(e);
         }
     }
