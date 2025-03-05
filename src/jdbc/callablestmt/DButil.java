@@ -18,7 +18,7 @@ public class DButil {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             //ip로 연동
-            String url = "jdbc:mysql://localhost:3306/ssgdb?useSSL=false&serverTime+UTC";
+            String url = "jdbc:mysql://localhost:3306/ssgdb?useSSL=false&serverTimezone=UTC";
             String username = "ssg";
             String password = "ssg";
             conn = DriverManager.getConnection(url, username, password);
